@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="theme-color" content="#07121f">
+
+    <title>نسیم ریمیکس | Nasim Remix</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- پس زمینه -->
+<div class="background">
+
+    <div class="stars"></div>
+
+    <div class="sun"></div>
+
+    <div class="sun-glow"></div>
+
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+
+    <div class="mountains"></div>
+
+    <div class="ocean">
+
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+
+        <div class="reflection"></div>
+
+    </div>
+
+</div>
+
+
+<!-- محتوا -->
+<div class="app">
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ♪
+            </div>
+
+            <div>
+                <strong>نسیم ریمیکس</strong>
+                <span>NASIM REMIX</span>
+            </div>
+
+        </div>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="mini-title">
+                ✦ MUSIC • VIBES • SUNSET
+            </div>
+
+            <h1>
+                نسیم ریمیکس
+                <br>
+                <span>نبض موزیک</span>
+            </h1>
+
+            <p>
+                بهترین ریمیکس‌ها بهترین رپ ها
+            </p>
+
+            <button class="explore-btn"
+                    onclick="document.getElementById('music').scrollIntoView({behavior:'smooth'})">
+
+                <span>شروع شنیدن</span>
+                <b>↓</b>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- موزیک -->
+    <main id="music">
+
+        <div class="section-head">
+
+            <div>
+                <span>NASIM PLAYLIST</span>
+                <h2>موزیک‌های جدید</h2>
+            </div>
+
+            <div class="music-count">
+                20 آهنگ
+            </div>
+
+        </div>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="جستجوی موزیک..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <!-- Cards -->
+        <div class="music-list" id="musicList"></div>
+
+    </main>
+
+
+    <!-- Player -->
+    <div class="player">
+
+        <div class="player-top">
+
+            <div class="player-cover" id="playerCover">
+                ♪
+            </div>
+
+            <div class="player-info">
+
+                <strong id="playerTitle">
+                    یک موزیک انتخاب کن
+                </strong>
+
+                <span>
+                    Nasim Remix
+                </span>
+
+            </div>
+
+            <button class="like-player" id="likePlayer">
+                ♡
+            </button>
+
+        </div>
+
+
+        <div class="progress-area">
+
+            <span id="currentTime">0:00</span>
+
+            <input
+                type="range"
+                id="progress"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+            <span id="duration">0:00</span>
+
+        </div>
+
+
+        <div class="controls">
+
+            <button id="shuffle">
+                🔀
+            </button>
+
+            <button id="previous">
+                ⏮
+            </button>
+
+            <button class="play-btn" id="play">
+                ▶
+            </button>
+
+            <button id="next">
+                ⏭
+            </button>
+
+            <button id="repeat">
+                🔁
+            </button>
+
+        </div>
+
+
+        <div class="volume">
+
+            <span>🔊</span>
+
+            <input
+                type="range"
+                id="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.8"
+            >
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <div class="footer-logo">
+            🌊 نسیم ریمیکس
+        </div>
+
+        <p>
+            Music that feels like sunset.
+        </p>
+
+        <small>
+            © 2026 Nasim Remix
+        </small>
+
+    </footer>
+
+</div>
+
+
+<audio id="audio"></audio>
+
+<script src="app.js"></script>
+
+</body>
+</html>
